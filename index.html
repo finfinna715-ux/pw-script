@@ -4,93 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PW SCRIPT</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
   <style>
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
+      0%,100% { transform: translateY(0); }
       50% { transform: translateY(-12px); }
     }
-    .social-icon { animation: float 3s ease-in-out infinite; }
+
+    @keyframes glow {
+      0%,100% { box-shadow: 0 0 20px rgba(168,85,247,.4); }
+      50% { box-shadow: 0 0 40px rgba(168,85,247,.9); }
+    }
+
+    .social-icon {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .glass {
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.02)
+      );
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .btn-glow {
+      animation: glow 3s ease-in-out infinite;
+    }
   </style>
 </head>
-<body class="bg-black text-white">
 
-  <div class="max-w-md mx-auto min-h-screen">
+<body class="bg-gradient-to-b from-black via-zinc-900 to-black text-white">
 
-    <!-- Hero -->
-    <div class="relative">
-      <img src="https://raw.githubusercontent.com/finfinna715-ux/pw-script/main/quality_restoration_20260502092140649.jpg" alt="PW SCRIPT" class="w-full">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80"></div>
-      <div class="absolute top-8 left-0 right-0 text-center">
-        <h1 class="text-5xl font-black">PW SCRIPT</h1>
-      </div>
+<div class="max-w-md mx-auto min-h-screen relative overflow-hidden">
+
+  <!-- HERO -->
+  <div class="relative">
+    <img src="https://raw.githubusercontent.com/finfinna715-ux/pw-script/main/quality_restoration_20260502092140649.jpg"
+         class="w-full h-[420px] object-cover scale-105">
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black"></div>
+
+    <div class="absolute top-24 left-0 right-0 text-center">
+      <h1 class="text-5xl font-black tracking-widest drop-shadow-lg">
+        PW SCRIPT
+      </h1>
+      <p class="mt-3 text-sm text-purple-300 tracking-wide">
+        NEXT GENERATION SCRIPT DEPLOYMENT
+      </p>
     </div>
-
-    <!-- Social Icons -->
-    <div class="flex justify-center gap-10 -mt-8 relative z-10">
-      <a href="https://www.youtube.com/@PWSCRIPT-u8b" target="_blank" class="social-icon text-5xl text-red-500"><i class="fab fa-youtube"></i></a>
-      <a href="https://discord.gg/D3VdkquwK" target="_blank" class="social-icon text-5xl text-indigo-400"><i class="fab fa-discord"></i></a>
-    </div>
-
-    <!-- Deployment Port -->
-    <div class="p-6">
-      <div class="bg-zinc-900 rounded-3xl p-8 text-center">
-        <h2 class="text-2xl font-bold mb-6">DEPLOYMENT PORT</h2>
-        
-        <a href="https://delta.filenetwork.vip/file/Delta-2.718.1110-02.apk" 
-           class="block bg-purple-600 py-5 rounded-2xl mb-4 font-bold text-lg">
-          📥 ดาวน์โหลด ANDROID
-        </a>
-        
-        <a href="https://cdn.gloopup.net/file/Delta-2.718.1110.ipa" 
-           class="block bg-zinc-800 py-5 rounded-2xl mb-4 font-bold text-lg">
-          📥 ดาวน์โหลด IOS
-        </a>
-        
-        <a href="#" onclick="alert('กำลังพัฒนาเวอร์ชันเว็บ...')" 
-           class="block bg-cyan-600 py-5 rounded-2xl font-bold text-lg">
-          🌐 เข้าใช้งาน WEB
-        </a>
-      </div>
-    </div>
-
-    <!-- Execution Flow -->
-    <div class="px-6 pb-10">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-purple-400">✦</span> EXECUTION FLOW
-      </h2>
-      <div class="space-y-3">
-        <div class="bg-zinc-900 rounded-2xl p-5">
-          <div class="flex gap-4">
-            <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">01</div>
-            <div>
-              <p class="font-medium">คลิกปุ่ม Download เพื่อเริ่มต้น</p>
-              <p class="text-sm text-gray-400">CLICK DOWNLOAD TO START INSTALLATION</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-zinc-900 rounded-2xl p-5">
-          <div class="flex gap-4">
-            <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">02</div>
-            <div>
-              <p class="font-medium">ติดตั้งไฟล์ APK</p>
-              <p class="text-sm text-gray-400">INSTALL THE APK ON YOUR DEVICE</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-zinc-900 rounded-2xl p-5">
-          <div class="flex gap-4">
-            <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">03</div>
-            <div>
-              <p class="font-medium">เข้าสู่ระบบและรับ Key</p>
-              <p class="text-sm text-gray-400">LOGIN AND RETRIEVE YOUR KEY</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
+  <!-- SOCIAL -->
+  <div class="flex justify-center gap-10 -mt-10 relative z-10">
+    <a href="https://www.youtube.com/@PWSCRIPT-u8b" target="_blank"
+       class="social-icon text-5xl text-red-500 hover:scale-110 transition">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://discord.gg/D3VdkquwK" target="_blank"
+       class="social-icon text-5xl text-indigo-400 hover:scale-110 transition">
+      <i class="fab fa-discord"></i>
+    </a>
+  </div>
+
+  <!-- DEPLOYMENT -->
+  <div class="p-6 mt-6">
+    <div class="glass rounded-3xl p-8 text-center shadow-2xl">
+      <h2 class="text-2xl font-bold mb-2 tracking-wider">
+        DEPLOYMENT PORT
+      </h2>
+      <p class="text-sm text-gray-400 mb-6">
+        Choose your platform to deploy
+      </p>
+
+      <a href="https://delta.filenetwork.vip/file/Delta-2.718.1110-02.apk"
+         class="block bg-gradient-to-r from-purple-600 to-fuchsia-600
+                py-5 rounded-2xl mb-4 font-bold text-lg
+                hover:scale-[1.02] transition btn-glow">
+        📥 ANDROID DOWNLOAD
+      </a>
+
+      <a href="https://cdn.gloopup.net/file/Delta-2.718.1110.ipa"
+         class="block bg-zinc-800 py-5 rounded-2xl mb-4
+                font-bold text-lg hover:bg-zinc-700 transition">
+        📥 IOS DOWNLOAD
+      </a>
+
+      <a href="#" onclick="alert('กำลังพัฒนาเวอร์ชันเว็บ...')"
+         class="block bg-cyan-600 py-5 rounded-2xl font-bold text-lg
+                hover:bg-cyan-500 transition">
+        🌐 WEB VERSION
+      </a>
+    </div>
+  </div>
+
+  <!-- FLOW -->
+  <div class="px-6 pb-14">
+    <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+      <span class="text-purple-400">✦</span> EXECUTION FLOW
+    </h2>
+
+    <div class="space-y-4">
+      <div class="glass rounded-2xl p-5">
+        <div class="flex gap-4">
+          <div class="w-9 h-9 bg-purple-600 rounded-xl flex items-center justify-center font-bold">
+            01
+          </div>
+          <div>
+            <p class="font-medium">คลิก Download</p>
+            <p class="text-sm text-gray-400">Start installation</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-5">
+        <div class="flex gap-4">
+          <div class="w-9 h-9 bg-purple-600 rounded-xl flex items-center justify-center font-bold">
+            02
+          </div>
+          <div>
+            <p class="font-medium">ติดตั้งแอป</p>
+            <p class="text-sm text-gray-400">Install APK / IPA</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-5">
+        <div class="flex gap-4">
+          <div class="w-9 h-9 bg-purple-600 rounded-xl flex items-center justify-center font-bold">
+            03
+          </div>
+          <div>
+            <p class="font-medium">รับ Key และเริ่มใช้งาน</p>
+            <p class="text-sm text-gray-400">Login & activate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-xs text-gray-500 pb-6">
+    © 2026 PW SCRIPT · Secure Deployment System
+  </footer>
+
+</div>
 </body>
 </html>
