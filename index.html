@@ -204,22 +204,36 @@
       🎥 วิดีโอแนะนำการใช้งาน
     </h2>
 
-    <!-- YOUTUBE THUMBNAIL -->
+    <!-- YOUTUBE THUMBNAIL WITH CENTER ICON -->
     <a href="https://youtu.be/cRm3YZmSgNY?si=bbX7xW41Ax0zADmQ"
        target="_blank"
-       class="block rounded-2xl overflow-hidden border border-white/10
+       class="relative block rounded-2xl overflow-hidden
+              border border-white/10
               hover:scale-[1.02] transition duration-300">
 
+      <!-- Thumbnail -->
       <img
         src="https://img.youtube.com/vi/cRm3YZmSgNY/maxresdefault.jpg"
         alt="PW Script Tutorial"
         class="w-full object-cover">
+
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <!-- YouTube Icon Center -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="bg-red-600/90 rounded-full p-5
+                    shadow-[0_0_40px_rgba(255,0,0,0.8)]
+                    hover:scale-110 transition">
+          <i class="fab fa-youtube text-white text-5xl"></i>
+        </div>
+      </div>
     </a>
 
     <!-- NOTE -->
     <p class="mt-5 text-sm text-purple-200 leading-relaxed">
       📌 <span class="font-semibold text-purple-300">หมายเหตุ:</span><br>
-      วิดีโอนี้จะแสดงขั้นตอนการดาวน์โหลด การติดตั้ง  
+      วิดีโอนี้แสดงขั้นตอนการดาวน์โหลด ติดตั้ง  
       และวิธีใช้งานทั้งหมดแบบละเอียด  
       แนะนำให้รับชมก่อนเริ่มใช้งานจริง
     </p>
