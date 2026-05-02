@@ -9,10 +9,11 @@
   <style>
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+      50% { transform: translateY(-15px); }
     }
-    .float-icon {
+    .social-icon {
       animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 10px 15px rgba(168, 85, 247, 0.6));
     }
   </style>
 </head>
@@ -24,34 +25,34 @@
     <div class="relative">
       <img src="https://raw.githubusercontent.com/finfinna715-ux/pw-script/main/quality_restoration_20260502092140649.jpg" 
            alt="PW SCRIPT" class="w-full">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90"></div>
       
-      <!-- Social Icons บนภาพ -->
-      <div class="absolute top-8 right-6 flex gap-5">
-        <a href="https://www.youtube.com/@PWSCRIPT-u8b" target="_blank" 
-           class="float-icon text-4xl hover:text-red-500 transition drop-shadow-lg">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://discord.gg/D3VdkquwK" target="_blank" 
-           class="float-icon text-4xl hover:text-indigo-400 transition drop-shadow-lg" style="animation-delay: 0.8s;">
-          <i class="fab fa-discord"></i>
-        </a>
-      </div>
-
-      <div class="absolute bottom-10 left-0 right-0 text-center">
-        <h1 class="text-5xl font-black tracking-widest">PW SCRIPT</h1>
+      <div class="absolute top-8 left-0 right-0 text-center">
+        <h1 class="text-5xl font-black tracking-widest text-white drop-shadow-2xl">PW SCRIPT</h1>
       </div>
     </div>
 
+    <!-- Social Icons ตรงกลาง -->
+    <div class="flex justify-center gap-10 -mt-8 relative z-10">
+      <a href="https://www.youtube.com/@PWSCRIPT-u8b" target="_blank" 
+         class="social-icon text-6xl text-red-500 hover:scale-110 transition">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://discord.gg/D3VdkquwK" target="_blank" 
+         class="social-icon text-6xl text-indigo-400 hover:scale-110 transition" style="animation-delay: 0.7s;">
+        <i class="fab fa-discord"></i>
+      </a>
+    </div>
+
     <!-- Downloads -->
-    <div class="p-6 space-y-4 -mt-8 relative z-10">
+    <div class="p-6 space-y-4 mt-4">
       <a href="https://delta.filenetwork.vip/file/Delta-2.718.1110-02.apk" 
-         class="block bg-gradient-to-r from-purple-600 to-violet-600 py-7 rounded-3xl text-center text-2xl font-bold">
+         class="block bg-gradient-to-r from-purple-600 via-violet-600 to-purple-700 py-7 rounded-3xl text-center text-2xl font-bold shadow-2xl">
         📥 ดาวน์โหลด ANDROID
       </a>
 
       <a href="https://cdn.gloopup.net/file/Delta-2.718.1110.ipa" 
-         class="block bg-zinc-800 py-7 rounded-3xl text-center text-2xl font-bold">
+         class="block bg-zinc-800 hover:bg-zinc-700 py-7 rounded-3xl text-center text-2xl font-bold shadow-2xl transition">
         📥 ดาวน์โหลด IOS
       </a>
     </div>
@@ -59,7 +60,7 @@
     <!-- Technical Spec -->
     <div class="px-6 pb-12">
       <h3 class="text-center text-xl font-bold mb-5">TECHNICAL SPEC</h3>
-      <div class="bg-zinc-900 rounded-3xl p-7 space-y-4">
+      <div class="bg-zinc-900/90 backdrop-blur rounded-3xl p-7 space-y-4 border border-purple-500/20">
         <div class="flex justify-between"><span>BUILD ID</span><span class="text-purple-400">Delta-2.718.1110</span></div>
         <div class="flex justify-between"><span>ARCH SUPPORT</span><span class="text-purple-400">ARM64 / ARM32</span></div>
         <div class="flex justify-between"><span>STATUS</span><span class="bg-green-500 text-black px-6 py-2 rounded-full text-sm font-bold">LIVE & SECURE</span></div>
