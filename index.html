@@ -6,6 +6,13 @@
   <title>PW SCRIPT</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .social-icon { animation: float 3s ease-in-out infinite; }
+  </style>
 </head>
 <body class="bg-black text-white">
 
@@ -13,55 +20,73 @@
 
     <!-- Hero -->
     <div class="relative">
-      <img src="https://raw.githubusercontent.com/finfinna715-ux/pw-script/main/quality_restoration_20260502092140649.jpg" 
-           alt="PW SCRIPT" class="w-full">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/85"></div>
-      
-      <!-- โลโก้เล็ก -->
-      <div class="absolute top-6 left-6 flex items-center gap-3">
-        <img src="https://raw.githubusercontent.com/finfinna715-ux/pw-script/main/quality_restoration_20260502092140649.jpg" 
-             class="w-11 h-11 rounded-2xl object-cover border-2 border-purple-400" alt="PW Logo">
-        <h1 class="text-3xl font-black tracking-wider">PW SCRIPT</h1>
-      </div>
-
-      <!-- YouTube + Discord -->
-      <div class="absolute top-6 right-6 flex gap-5 text-3xl">
-        <a href="https://discord.gg/D3VdkquwK" target="_blank" class="hover:text-indigo-400 transition">
-          <i class="fab fa-discord"></i>
-        </a>
-        <a href="https://www.youtube.com/@PWSCRIPT-u8b" target="_blank" class="hover:text-red-500 transition">
-          <i class="fab fa-youtube"></i>
-        </a>
+      <img src="https://raw.githubusercontent.com/finfinna715-ux/pw-script/main/quality_restoration_20260502092140649.jpg" alt="PW SCRIPT" class="w-full">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80"></div>
+      <div class="absolute top-8 left-0 right-0 text-center">
+        <h1 class="text-5xl font-black">PW SCRIPT</h1>
       </div>
     </div>
 
-    <!-- Downloads -->
-    <div class="p-6 space-y-4 -mt-6">
-      <a href="https://delta.filenetwork.vip/file/Delta-2.718.1110-02.apk" 
-         class="block bg-purple-600 py-6 rounded-3xl text-center text-xl font-bold">
-        📥 ดาวน์โหลด ANDROID
-      </a>
-      <a href="https://cdn.gloopup.net/file/Delta-2.718.1110.ipa" 
-         class="block bg-zinc-800 py-6 rounded-3xl text-center text-xl font-bold">
-        📥 ดาวน์โหลด IOS
-      </a>
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-10 -mt-8 relative z-10">
+      <a href="https://www.youtube.com/@PWSCRIPT-u8b" target="_blank" class="social-icon text-5xl text-red-500"><i class="fab fa-youtube"></i></a>
+      <a href="https://discord.gg/D3VdkquwK" target="_blank" class="social-icon text-5xl text-indigo-400"><i class="fab fa-discord"></i></a>
+    </div>
+
+    <!-- Deployment Port -->
+    <div class="p-6">
+      <div class="bg-zinc-900 rounded-3xl p-8 text-center">
+        <h2 class="text-2xl font-bold mb-6">DEPLOYMENT PORT</h2>
+        
+        <a href="https://delta.filenetwork.vip/file/Delta-2.718.1110-02.apk" 
+           class="block bg-purple-600 py-5 rounded-2xl mb-4 font-bold text-lg">
+          📥 ดาวน์โหลด ANDROID
+        </a>
+        
+        <a href="https://cdn.gloopup.net/file/Delta-2.718.1110.ipa" 
+           class="block bg-zinc-800 py-5 rounded-2xl mb-4 font-bold text-lg">
+          📥 ดาวน์โหลด IOS
+        </a>
+        
+        <a href="#" onclick="alert('กำลังพัฒนาเวอร์ชันเว็บ...')" 
+           class="block bg-cyan-600 py-5 rounded-2xl font-bold text-lg">
+          🌐 เข้าใช้งาน WEB
+        </a>
+      </div>
     </div>
 
     <!-- Execution Flow -->
     <div class="px-6 pb-10">
-      <h2 class="text-xl font-bold mb-4">EXECUTION FLOW</h2>
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span class="text-purple-400">✦</span> EXECUTION FLOW
+      </h2>
       <div class="space-y-3">
-        <div class="bg-zinc-900 rounded-2xl p-5 flex gap-4">
-          <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">01</div>
-          <div><p class="font-medium">คลิกปุ่ม Download</p></div>
+        <div class="bg-zinc-900 rounded-2xl p-5">
+          <div class="flex gap-4">
+            <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">01</div>
+            <div>
+              <p class="font-medium">คลิกปุ่ม Download เพื่อเริ่มต้น</p>
+              <p class="text-sm text-gray-400">CLICK DOWNLOAD TO START INSTALLATION</p>
+            </div>
+          </div>
         </div>
-        <div class="bg-zinc-900 rounded-2xl p-5 flex gap-4">
-          <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">02</div>
-          <div><p class="font-medium">ติดตั้ง APK</p></div>
+        <div class="bg-zinc-900 rounded-2xl p-5">
+          <div class="flex gap-4">
+            <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">02</div>
+            <div>
+              <p class="font-medium">ติดตั้งไฟล์ APK</p>
+              <p class="text-sm text-gray-400">INSTALL THE APK ON YOUR DEVICE</p>
+            </div>
+          </div>
         </div>
-        <div class="bg-zinc-900 rounded-2xl p-5 flex gap-4">
-          <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">03</div>
-          <div><p class="font-medium">เข้าสู่ระบบและรับ Key</p></div>
+        <div class="bg-zinc-900 rounded-2xl p-5">
+          <div class="flex gap-4">
+            <div class="w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center font-bold">03</div>
+            <div>
+              <p class="font-medium">เข้าสู่ระบบและรับ Key</p>
+              <p class="text-sm text-gray-400">LOGIN AND RETRIEVE YOUR KEY</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
