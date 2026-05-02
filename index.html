@@ -6,65 +6,59 @@
   <title>PW SCRIPT</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    body { background: #0f0f0f; }
-    .glow { text-shadow: 0 0 20px rgba(168, 85, 247, 0.8); }
-  </style>
 </head>
-<body class="text-white">
+<body class="text-white bg-black">
 
-  <div class="max-w-md mx-auto min-h-screen bg-black">
+  <div class="max-w-md mx-auto min-h-screen">
 
-    <!-- Hero -->
-    <div class="bg-gradient-to-br from-purple-900 to-black p-8 text-center">
-      <div class="flex justify-center gap-3 mb-6">
-        <i class="fab fa-youtube text-3xl text-red-500 cursor-pointer" onclick="window.open('https://www.youtube.com/@PWSCRIPT-u8b', '_blank')"></i>
-        <i class="fab fa-discord text-3xl text-blue-500 cursor-pointer" onclick="window.open('https://discord.gg/D3VdkquwK', '_blank')"></i>
-      </div>
+    <!-- Hero Image -->
+    <div class="relative">
+      <img src="https://i.imgur.com/0z5z5z5.jpg" alt="PW SCRIPT" class="w-full h-auto">
       
-      <h1 class="text-5xl font-black glow">PW SCRIPT</h1>
-      <p class="text-purple-300 mt-2">Enhanced Kernel • Delta Version</p>
-
-      <button onclick="window.open('https://www.youtube.com/@PWSCRIPT-u8b', '_blank')" 
-              class="mt-8 bg-red-600 hover:bg-red-700 w-full py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3">
-        <i class="fab fa-youtube"></i> PW SCRIPT
-      </button>
-    </div>
-
-    <!-- Download Section -->
-    <div class="p-6 space-y-6">
-      <div>
-        <h3 class="text-center text-xl font-bold mb-4">ANDROID UPDATES!</h3>
-        <a href="https://delta.filenetwork.vip/file/Delta-2.718.1110-02.apk" 
-           class="block bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-center py-6 rounded-3xl text-xl font-bold">
-          📥 ดาวน์โหลด ANDROID
-        </a>
-      </div>
-
-      <div>
-        <h3 class="text-center text-xl font-bold mb-4">IOS PLATFORM</h3>
-        <a href="https://cdn.gloopup.net/file/Delta-2.718.1110.ipa" 
-           class="block bg-zinc-800 hover:bg-zinc-700 text-center py-6 rounded-3xl text-xl font-bold">
-          📥 ดาวน์โหลด IOS
-        </a>
-      </div>
-
-      <div>
-        <h3 class="text-center text-xl font-bold mb-4">WEB CLOUD PLATFORM</h3>
-        <a href="#" onclick="alert('กำลังพัฒนาเวอร์ชันเว็บ...')" 
-           class="block bg-cyan-600 hover:bg-cyan-500 text-center py-6 rounded-3xl text-xl font-bold">
-          🌐 เข้าใช้งาน WEB
-        </a>
+      <div class="absolute top-6 left-6 flex items-center gap-3">
+        <div class="w-11 h-11 bg-purple-600 rounded-2xl flex items-center justify-center text-3xl font-bold shadow-lg">PW</div>
+        <h1 class="text-3xl font-black tracking-widest">PW SCRIPT</h1>
       </div>
     </div>
 
-    <!-- Spec -->
-    <div class="px-6 pb-12">
-      <h3 class="font-bold text-lg mb-4 px-2">TECHNICAL SPEC</h3>
-      <div class="bg-zinc-900 rounded-3xl p-6 space-y-4 text-sm">
+    <!-- Download Buttons -->
+    <div class="p-6 space-y-5 -mt-6 relative z-10">
+      
+      <!-- Android -->
+      <a href="https://delta.filenetwork.vip/file/Delta-2.718.1110-02.apk" 
+         class="block bg-gradient-to-r from-purple-600 to-violet-600 text-center py-6 rounded-3xl text-xl font-bold shadow-lg hover:scale-105 transition">
+        📥 ดาวน์โหลด ANDROID
+      </a>
+
+      <!-- iOS -->
+      <a href="https://cdn.gloopup.net/file/Delta-2.718.1110.ipa" 
+         class="block bg-zinc-800 hover:bg-zinc-700 text-center py-6 rounded-3xl text-xl font-bold shadow-lg transition">
+        📥 ดาวน์โหลด IOS
+      </a>
+
+      <!-- Web -->
+      <a href="#" onclick="alert('เวอร์ชันเว็บกำลังพัฒนา...')" 
+         class="block bg-cyan-600 hover:bg-cyan-500 text-center py-6 rounded-3xl text-xl font-bold shadow-lg transition">
+        🌐 เข้าใช้งาน WEB
+      </a>
+    </div>
+
+    <!-- Social + Spec -->
+    <div class="px-6 pb-10 text-center">
+      <div class="flex justify-center gap-8 mb-8">
+        <a href="https://www.youtube.com/@PWSCRIPT-u8b" target="_blank" class="text-3xl hover:text-red-500 transition">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://discord.gg/D3VdkquwK" target="_blank" class="text-3xl hover:text-blue-500 transition">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+
+      <h3 class="font-bold text-lg mb-4">TECHNICAL SPEC</h3>
+      <div class="bg-zinc-900 rounded-3xl p-6 space-y-3 text-sm">
         <div class="flex justify-between"><span>BUILD ID</span><span class="text-purple-400">Delta-2.718.1110</span></div>
         <div class="flex justify-between"><span>ARCH SUPPORT</span><span class="text-purple-400">ARM64 / ARM32</span></div>
-        <div class="flex justify-between"><span>STATUS</span><span class="bg-green-500 px-4 py-1 rounded-full text-black font-bold">LIVE & SECURE</span></div>
+        <div class="flex justify-between"><span>STATUS</span><span class="bg-green-500 px-5 py-1 rounded-full text-black font-bold">LIVE & SECURE</span></div>
       </div>
     </div>
 
