@@ -239,9 +239,28 @@
     </p>
 
   </div>
-</div><!-- DEPLOYMENT PORT -->
-<div class="p-6 mt-10"><!-- FREE FIRE MAX PORT -->
-<div class="p-6 mt-10">
+</div><!-- TAB BUTTONS -->
+<div class="px-6 mt-12">
+  <div class="glass rounded-2xl p-2 flex gap-2 text-sm font-bold">
+
+    <button
+      onclick="showTab('ffmax')"
+      class="flex-1 py-3 rounded-xl bg-emerald-600 text-white transition"
+      id="tab-ffmax">
+      🎮 FREE FIRE MAX
+    </button>
+
+    <button
+      onclick="showTab('deploy')"
+      class="flex-1 py-3 rounded-xl bg-white/10 text-purple-300 transition"
+      id="tab-deploy">
+      🚀 DEPLOYMENT
+    </button>
+
+  </div>
+</div><!-- FREE FIRE MAX TAB -->
+<div id="ffmax" class="tab-content px-6 mt-8">
+
   <div class="glass rounded-3xl p-8 shadow-2xl">
 
     <h2 class="text-2xl font-bold text-center mb-2 text-emerald-400">
@@ -251,25 +270,42 @@
       Game Download Port
     </p>
 
-    <div class="space-y-4 text-center">
+    <a href="https://www.mediafire.com/file/91ne7hw6c2pqbi6/FF+%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%A2%E0%B8%B4%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%AB%E0%B8%B1%E0%B8%A7+%28%E0%B8%9F%E0%B8%B5%E0%B8%9F%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%81%29+V.4+Review+By+%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9F%E0%B9%89%E0%B8%B2+%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%9F%E0%B8%A3%E0%B8%B5.xapk/file"
+       target="_blank"
+       class="block bg-gradient-to-br from-emerald-500 via-green-600 to-teal-700
+              py-5 rounded-2xl font-bold text-lg shadow-lg
+              hover:-translate-y-1 transition-all duration-300 text-center">
+      📥 DOWNLOAD FREE FIRE MAX (XAPK)
+    </a>
 
-      <a href="https://www.mediafire.com/file/91ne7hw6c2pqbi6/FF+%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%A2%E0%B8%B4%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%82%E0%B8%94%E0%B8%99%E0%B8%AB%E0%B8%B1%E0%B8%A7+%28%E0%B8%9F%E0%B8%B5%E0%B8%9F%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%81%29+V.4+Review+By+%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%9F%E0%B9%89%E0%B8%B2+%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%9F%E0%B8%A3%E0%B8%B5.xapk/file"
-         target="_blank"
-         class="block bg-gradient-to-br from-emerald-500 via-green-600 to-teal-700
-                py-5 rounded-2xl font-bold text-lg shadow-lg
-                hover:-translate-y-1
-                hover:shadow-[0_22px_60px_rgba(16,185,129,0.9)]
-                transition-all duration-300">
-
-        📥 DOWNLOAD FREE FIRE MAX (XAPK)
-
-      </a>
-
-      <p class="text-xs text-emerald-200 opacity-80">
-        รองรับ Android • ไฟล์ XAPK • แตกไฟล์ก่อนติดตั้ง
-      </p>
-
-    </div>
+    <p class="mt-4 text-xs text-emerald-200 text-center opacity-80">
+      Android • XAPK • ต้องแตกไฟล์ก่อนติดตั้ง
+    </p>
 
   </div>
-</div>
+</div><!-- DEPLOYMENT TAB -->
+<div id="deploy" class="tab-content px-6 mt-8 hidden">
+  <!-- 🔽 วาง DEPLOYMENT PORT เดิมทั้งหมดไว้ตรงนี้ 🔽 -->
+</div><script>
+  function showTab(tab) {
+    document.querySelectorAll('.tab-content').forEach(el => {
+      el.classList.add('hidden');
+    });
+
+    document.getElementById(tab).classList.remove('hidden');
+
+    document.getElementById('tab-ffmax').className =
+      'flex-1 py-3 rounded-xl bg-white/10 text-emerald-300 transition';
+
+    document.getElementById('tab-deploy').className =
+      'flex-1 py-3 rounded-xl bg-white/10 text-purple-300 transition';
+
+    if (tab === 'ffmax') {
+      document.getElementById('tab-ffmax').className =
+        'flex-1 py-3 rounded-xl bg-emerald-600 text-white transition';
+    } else {
+      document.getElementById('tab-deploy').className =
+        'flex-1 py-3 rounded-xl bg-purple-700 text-white transition';
+    }
+  }
+</script>
